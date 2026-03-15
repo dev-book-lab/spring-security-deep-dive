@@ -530,6 +530,6 @@ Spring Security 6.x
 
 <div align="center">
 
-**[← 이전: Stateless Session (JWT 환경)](./05-stateless-session.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 5으로 이동: JWT 구조와 검증 ➡️](../jwt-authentication/01-jwt-structure-validation.md)**
+**[← 이전: Stateless Session (JWT 환경)](./05-stateless-session.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 5으로 이동: JWT 구조와 검증 ➡️](../jwt-authentication/01-jwt-structure-analysis.md)**
 
 </div>
