@@ -262,9 +262,9 @@ Day 1  Ch6-01  OAuth2 4가지 Grant Type
 Day 2  Ch6-02  Authorization Code Flow 완전 분석 ← 핵심
 Day 3  Ch6-03  OAuth2LoginAuthenticationFilter 동작
 Day 4  Ch6-04  ClientRegistration 구성
-Day 5  Ch6-06  Custom OAuth2UserService 작성
-Day 6  Ch6-07  JWT Bearer Token Resource Server
-Day 7  Ch5-04  SecurityContext에 저장하는 방식 비교 (JWT vs OAuth2)
+Day 5  Ch6-05  OAuth2AuthorizedClient 관리
+Day 6  Ch6-06  Custom OAuth2UserService 작성
+Day 7  Ch6-07  JWT Bearer Token Resource Server
 ```
 
 </details>
@@ -328,8 +328,8 @@ Day 7  Ch5-04  SecurityContext에 저장하는 방식 비교 (JWT vs OAuth2)
 // FilterChainProxy.doFilterInternal() — 실행되는 Filter 목록 (순서)
 //
 // ① Ch1-07 SecurityContextHolderFilter          HTTP Session에서 SecurityContext 복원
-// ② Ch4-06 CsrfFilter                           CSRF 토큰 검증
-//          CorsFilter                           CORS Preflight 처리
+// ② Ch7-01 CorsFilter                           CORS Preflight 처리  (순서 700)
+//    Ch4-06 CsrfFilter                          CSRF 토큰 검증       (순서 800)
 // ③ Ch2-05 UsernamePasswordAuthenticationFilter 폼 로그인 처리
 //          JwtAuthenticationFilter (Custom)     JWT 검증 → SecurityContext 저장  ← Ch5
 //          BasicAuthenticationFilter            Basic Auth 처리
@@ -338,8 +338,8 @@ Day 7  Ch5-04  SecurityContext에 저장하는 방식 비교 (JWT vs OAuth2)
 //          SecurityContextHolderAwareRequestFilter
 // ⑤        AnonymousAuthenticationFilter        인증 없는 요청에 익명 Authentication 부여
 // ⑥ Ch4-01 SessionManagementFilter             세션 고정 방어, 동시 접속 제어
-// ⑦        ExceptionTranslationFilter           AuthenticationException → 401
-//                                               AccessDeniedException    → 403
+// ⑦        ExceptionTranslationFilter           AuthenticationException → 401 (로그인 리다이렉트)
+//                                               AccessDeniedException    → 익명 사용자: 401 / 인증된 사용자: 403
 // ⑧ Ch3-03 AuthorizationFilter                 URL 기반 권한 검사 (최종 관문)
 //
 //
@@ -381,6 +381,8 @@ Day 7  Ch5-04  SecurityContext에 저장하는 방식 비교 (JWT vs OAuth2)
 | A07 | Identification and Authentication Failures | Ch2 Authentication, Ch4 Session |
 | A08 | Software and Data Integrity Failures | Ch5 JWT 검증, Ch6 OAuth2 state |
 | A09 | Security Logging and Monitoring Failures | Ch7 Security Events |
+
+> A04(Insecure Design), A06(Vulnerable Components), A10(SSRF)은 이 레포의 범위 밖입니다.
 
 ---
 
