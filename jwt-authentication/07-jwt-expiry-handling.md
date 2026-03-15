@@ -633,6 +633,6 @@ Race Condition 방지
 
 <div align="center">
 
-**[← 이전: Claims 추출과 사용](./06-claims-extraction.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 6으로 이동: OAuth2 & OIDC ➡️](../oauth2-oidc/01-oauth2-authorization-code-flow.md)**
+**[← 이전: Claims 추출과 사용](./06-claims-extraction.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 6으로 이동: OAuth2 & OIDC ➡️](../oauth2-oidc/01-oauth2-grant-types.md)**
 
 </div>
