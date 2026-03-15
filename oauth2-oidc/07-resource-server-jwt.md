@@ -514,6 +514,6 @@ scope → GrantedAuthority 기본 변환
 
 <div align="center">
 
-**[← 이전: Custom OAuth2UserService 작성](./06-custom-oauth2-user-service.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 7으로 이동: Advanced Security ➡️](../advanced-security/01-method-security-advanced.md)**
+**[← 이전: Custom OAuth2UserService 작성](./06-custom-oauth2-user-service.md)** | **[홈으로 🏠](../README.md)** | **[Chapter 7으로 이동: Advanced Security ➡️](../advanced-security/01-cors-configuration.md)**
 
 </div>
