@@ -406,6 +406,6 @@ Made with ❤️ by [Dev Book Lab](https://github.com/dev-book-lab)
 
 <br/>
 
-*"@PreAuthorize를 쓰는 것과, FilterChainProxy가 15개 Filter를 어떤 순서로 거쳐 인증을 결정하는지 아는 것은 다르다"*
+**"@PreAuthorize를 쓰는 것과, FilterChainProxy가 15개 Filter를 어떤 순서로 거쳐 인증을 결정하는지 아는 것은 다르다"**
 
 </div>
